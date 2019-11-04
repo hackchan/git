@@ -10,3 +10,16 @@ git commit -m "first commit"
 git remote add origin git@github.com:hackchan/git.git
 git push -u origin master
 ```
+
+## Collaborating
+
+```bash
+git remote
+git remote -v
+
+git remote add <name>               <url>
+git remote add origin git@github.com:hackchan/git.git
+git remote rm origin
+git remote rename origin hero
+git remote show origin
+```
