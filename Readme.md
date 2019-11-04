@@ -11,6 +11,13 @@ git remote add origin git@github.com:hackchan/git.git
 git push -u origin master
 ```
 
+## Basic
+
+```bash
+git show
+git dif
+```
+
 ## Collaborating
 
 ```bash
