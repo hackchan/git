@@ -1,0 +1,15 @@
+body {
+  font-size: 16px;
+  font-family: "Arial";
+  background: #444;
+  color: #999;
+}
+
+.link {
+  text-decoration: none;
+  color: orange;
+}
+
+ul {
+  list-style: none;
+}
