@@ -43,3 +43,9 @@ git remote rm origin
 git remote rename origin hero
 git remote show origin
 ```
+
+## Regresar en el tiempo
+
+```bash
+git reset 82333bb --hard
+```
