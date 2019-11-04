@@ -3,13 +3,38 @@ body {
   font-family: "Arial";
   background: #444;
   color: #999;
+  margin: 0;
 }
 
 .link {
   text-decoration: none;
   color: orange;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
 }
 
-ul {
+nav ul {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+nav li {
+  height: inherit;
   list-style: none;
+}
+
+header {
+  height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  height: inherit;
 }
