@@ -1,5 +1,14 @@
 # Curso de Git
 
+## Configuracion
+
+```bash
+git config
+git config --list --show-origin
+git config --global user.name  "Fabio  Rojas"
+git config --global user.email  "fabiorojas7@gmail.com"
+```
+
 ## comandos basicos
 
 ```bash
@@ -16,6 +25,10 @@ git push -u origin master
 ```bash
 git show
 git dif
+git log
+#remover un archivo del Staging Area al Working Directory
+git rm --cached .\Readme.md
+git reset HEAD  .\Readme.md
 ```
 
 ## Collaborating
