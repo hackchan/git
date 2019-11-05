@@ -1,3 +1,7 @@
 /************************************/
 /* Plan de estudio para un Frontend */
 /************************************/
+
+1). Curso de Html
+2). Curso de Desarrollo Web
+3). Curso de responsive
