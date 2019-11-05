@@ -44,8 +44,32 @@ git remote rename origin hero
 git remote show origin
 ```
 
+## Sacar del Stagin Area
+
+```bash
+git restore --staged <file>
+
+#Este es el comando para sacar archivos del área de #Staging. No para borrarlos ni nada de eso, solo para que #los últimos cambios de estos archivos no se envíen al #último commit, a menos que cambiemos de opinión y los #incluyamos de nuevo en staging
+git reset HEAD
+```
+
+## Eliminar Archivos
+
+```bash
+#Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+git rm --cached
+
+#Elimina los archivos de Git y del disco duro. Git siempre #guarda todo, por lo que podemos acceder al registro de la #existencia de los archivos, de modo que podremos #recuperarlos si es necesario (pero debemos usar comandos #más avanzados).
+git rm --force
+```
+
 ## Regresar en el tiempo
 
 ```bash
+#Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
 git reset 82333bb --hard
+#Borramos todo el historial y los registros de Git pero #guardamos los cambios que tengamos en Staging, así #podemos aplicar las últimas actualizaciones a un nuevo #commit.
+git reset 82333bb --soft
+#profundizar
+git reset 3434634 --mixed
 ```
