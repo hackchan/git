@@ -48,7 +48,8 @@ git remote show origin
 
 ```bash
 git restore --staged <file>
-
+git checkout -- <file>...
+git reset HEAD <file>
 #Este es el comando para sacar archivos del área de #Staging. No para borrarlos ni nada de eso, solo para que #los últimos cambios de estos archivos no se envíen al #último commit, a menos que cambiemos de opinión y los #incluyamos de nuevo en staging
 git reset HEAD
 ```
