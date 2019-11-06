@@ -2,3 +2,4 @@
 /* Plan de estudio para un Frontend */
 /************************************/
 1. curso de git
+2. curso de html
