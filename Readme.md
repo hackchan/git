@@ -74,3 +74,16 @@ git reset 82333bb --soft
 #profundizar
 git reset 3434634 --mixed
 ```
+
+## Obtener cambios del repositorio remoto
+
+```
+#bajamos cambios con fetch y los fusionamos con nuestro
+git fetch
+git merge
+#para descargar y hacer la actualizacion de una vez
+git pull
+
+
+
+```
