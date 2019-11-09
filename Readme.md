@@ -83,7 +83,32 @@ git fetch
 git merge
 #para descargar y hacer la actualizacion de una vez
 git pull
+```
 
+## Git Diff
 
+```
+#por defecto git diff compara los archivos que estan en el working directory pero  si se necesita comparar un archivo que esta en el stagin
+
+git diff --staged
+
+```
+
+# Git Show
+
+```
+#git show muestra los cambios del ultimo commit (HEAD commit)
+git show
+
+```
+
+# Git log
+
+```bash
+git log
+git log --oneline
+git reflog
+git log --stat
+git log --grep="#1234"
 
 ```
