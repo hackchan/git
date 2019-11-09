@@ -68,7 +68,7 @@ git rm --force
 
 ```bash
 #Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
-git reset 82333bb --hard
+git reset 82333bb --hard #Equivale hacer git reset y luego git checkout
 #Borramos todo el historial y los registros de Git pero #guardamos los cambios que tengamos en Staging, así #podemos aplicar las últimas actualizaciones a un nuevo #commit.
 git reset 82333bb --soft
 #profundizar
@@ -78,9 +78,9 @@ git reset 3434634 --mixed
 ## Obtener cambios del repositorio remoto
 
 ```
-#bajamos cambios con fetch y los fusionamos con nuestro
+#bajamos cambios con fetch los deja en otra rama oculta llamada origin/master la ventaja es que podemos ver que cambios son antes de fusionar a nuestro proyecto.
 git fetch
-git merge
+git merge origin/master
 #para descargar y hacer la actualizacion de una vez
 git pull
 ```
