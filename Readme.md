@@ -230,7 +230,7 @@ alias minilog="git log --all --graph --decorate --oneline"
 git config --global alias.minilog 'git log --all --graph --decorate --oneline'
 ```
 
-# Git tab
+# Git tag
 
 ```bash
 #En git hay dos tipos de etiquetas Ligeras y Anotadas
@@ -245,3 +245,5 @@ git tag -d dormido
 #borra tag en remoto
 git push origin :ref/tags/dormido
 ```
+
+
