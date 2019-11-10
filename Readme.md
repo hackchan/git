@@ -7,6 +7,13 @@ git config
 git config --list --show-origin
 git config --global user.name  "Fabio  Rojas"
 git config --global user.email  "fabiorojas7@gmail.com"
+
+#Colocando una terminal mas agradable para git en centos
+yum install zsh
+chsh -s /bin/zsh root
+echo $SHELL
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ## comandos basicos
@@ -83,6 +90,32 @@ git fetch
 git merge origin/master
 #para descargar y hacer la actualizacion de una vez
 git pull
+git pull --no-edit origin master
+git log --all --decorate --oneline
+git pull --rebase
+```
+
+# Branch
+
+```bash
+git checkout -b <nueva-rama>
+git branch <nueva-rama>
+git checkout <nueva-rama>
+
+#ver todas las ramas
+git branch -va
+
+#merge a master
+git checkout master
+git merge master
+#subir rama
+git push <remote_name> <branch_name>
+#borrar rama
+git branch -d <branch_name>
+
+git show-branch --all
+#Ayuda grafica
+gitk
 ```
 
 ## Git Diff
@@ -91,6 +124,9 @@ git pull
 #por defecto git diff compara los archivos que estan en el working directory pero  si se necesita comparar un archivo que esta en el stagin
 
 git diff --staged
+
+# comparo dos commits
+git diff HEAD~2 HEAD
 
 ```
 
@@ -110,5 +146,102 @@ git log --oneline
 git reflog
 git log --stat
 git log --grep="#1234"
+git log -p
+git log --oneline -n 2
+git log  -n 2
+git log -m
+git log --no-merges
+git log --since="2 weeks ago"
+git log --since="2 weeks ago" and --until="1 day ago"
+git log -p -m --first-parent
+git log 3
+```
 
+# Git revert
+
+```bash
+#Acabo de subir las claves bancarias a github :O para
+#eliminar dicho cambio
+git revert HEAD  O git revert HEAD --no-edit O git revert HEAD...HEAD~2 --no-edit
+git push origin master
+```
+
+# Resolviendo conflictos
+
+```bash
+git checkout --ours staging.txt
+git checkout --theirs staging.txt
+
+git add stagin.txt
+git commit --no-edit
+```
+
+# Git Blame
+
+```bash
+git blame list.html
+git blame -L 6,8 list.html
+```
+
+# Git Bisect
+
+```bash
+git bisect start
+git bisect bad
+git bisect good HEAD~5
+cat list.html
+git bisect good
+cat list.html
+git bisect bad
+```
+
+# Git Cherry-pick
+
+```bash
+git cherry-pick 0244a2f19abf4a38ac77b6c376512c0e0a86d9d4
+
+#si hay conflictos
+git mergetool
+git add --all
+git cherry-pick --continue
+
+#si queremos abortar
+git cherry-pick --abort
+```
+
+# Git rebase
+
+```bash
+
+```
+
+# Github
+
+```bash
+git pull origin master --allow-unrelated-histories
+```
+
+# Git alias
+
+```bash
+#alias de linux
+alias minilog="git log --all --graph --decorate --oneline"
+#alias de git
+git config --global alias.minilog 'git log --all --graph --decorate --oneline'
+```
+
+# Git tab
+
+```bash
+#En git hay dos tipos de etiquetas Ligeras y Anotadas
+#1. Anotadas
+git tag -a v0.0.1 "estable proyecto login"
+git tag
+git show-ref --tags
+git push origin --tags
+
+#borra tag en local
+git tag -d dormido
+#borra tag en remoto
+git push origin :ref/tags/dormido
 ```
