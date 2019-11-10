@@ -1,14 +1,8 @@
 /************************************/
 /* Plan de estudio para un Frontend */
 /************************************/
-<<<<<<< HEAD
+
 1. curso de git
 2. curso de html
 3. curso de css
 4. curso de javascript
-=======
-
-1). Curso de Html
-2). Curso de Desarrollo Web
-3). Curso de responsive
->>>>>>> 913dfebac6172c7b662c4a389edc0bdb76f40703
