@@ -9,11 +9,16 @@ git config --global user.name  "Fabio  Rojas"
 git config --global user.email  "fabiorojas7@gmail.com"
 
 #Colocando una terminal mas agradable para git en centos
-yum install zsh
-chsh -s /bin/zsh root
-echo $SHELL
-
+#1.INSTALL ZSH
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#2.PLUGINS
+ #2.1 NVM
+ git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+ #2.2 AUTOSUGGESTION
+ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+plugins=(git zsh-autosuggestions zsh-nvm)
 ```
 
 ## comandos basicos
@@ -245,5 +250,3 @@ git tag -d dormido
 #borra tag en remoto
 git push origin :ref/tags/dormido
 ```
-
-
