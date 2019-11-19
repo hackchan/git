@@ -1,5 +1,31 @@
 # Curso de Git
 
+## Multiple ssh key
+
+````bash
+
+ssh-keygen -f ~/.ssh/heroblack -t rsa -b 4096 -C “inge.fabio.rojas@gmail.com”
+
+ssh-keygen -f ~/.ssh/hackchan -t rsa -b 4096 -C “fabiorojas7@gmail.com”
+
+eval `ssh-agent -s`
+ssh-add heroblack
+ssh-add hackchan
+ssh-add -l
+
+vim ~/.ssh/config
+```txt
+ Host hackchan
+ HostName github.com
+ IdentityFile ~/.ssh/hackchan
+ #-------------------------------
+ Host heroblack
+ HostName github.com
+ IdentityFile ~/.ssh/heroblack
+```
+
+````
+
 ## Configuracion
 
 ```bash
